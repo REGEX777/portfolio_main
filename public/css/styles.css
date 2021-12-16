@@ -81,7 +81,9 @@ body {
 .main-tagline{
     text-align: center;
 }
-
+.copyright-text{
+    font-size: 40px;
+}
 .card{
     text-align: center;
     background-color: #041C32;
