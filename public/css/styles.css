@@ -78,6 +78,10 @@ body {
     border-radius: 4px;
 }
 
+.main-tagline{
+    text-align: center;
+}
+
 .card{
     text-align: center;
     background-color: #041C32;
