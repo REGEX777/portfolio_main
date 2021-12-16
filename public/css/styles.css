@@ -1,32 +1,113 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
-*{
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro');
+
+/* https://colorhunt.co/palette/041c3204293a064663ecb365 */
+* {
     padding: 0;
     margin: 0;
 }
-body{
+
+body {
     font-family: 'Roboto', sans-serif;
+    background-color: #04293A;
 }
 
-.links{
+.main-text {
+    /* text-align: center; */
+    /* font-size: 70px; */
+    font-family: 'Anonymous Pro', monospace;  
+    /* color: #ECB365; */
+    position: relative;
+    top: 50%;  
+    color: #ECB365;
+    /* width: 24em; */
+    margin: 0 auto;
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+.body {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links {
     float: right;
     font-size: 17px;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Anonymous Pro', monospace;  
 }
-.brand{
+
+
+.brand {
     float: left;
     transform: rotate(90deg);
     font-size: 30px;
 }
-.links ul li{
+
+.projects-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 400px;
+    background-color: #064663;
+    border-radius: 4px;
+}
+
+.nav-link{
+    color: #ECB365;
+    text-decoration: none;
+}
+
+.links ul li {
     padding: 0 5px 0 5px;
     display: inline-block;
 }
-.navbar{
+
+.navbar {
     margin: 0 70px 0 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.nav{
-    color: #FEE3EC;
-    background-color: #191919;
-    height: 100px;
+
+.nav {
+    color: #ECB365;
+    background-color: #041C32;
+    /* height: 100px; */
 }
+
+
+
+
+
+
+.typing-demo {
+    width: 22ch;
+    animation: typing 2s steps(20), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
