@@ -11,13 +11,35 @@
             <li>
                 <div class="tooltip"><i class="fab fa-discord"></i><span class="tooltiptext">regex#9222</span></div>
             </li>
-            <li><i class="fab fa-instagram"></i></li>
-            <li><i class="far fa-envelope"></i></li>
+            <li>
+                <a href="https://www.instagram.com/regex777/" class="mail"><i class="fab fa-instagram"></i></a></i>
+            </li>
+            <li>
+                <a href="mailto:hmmho705@gmail.com" class="mail"><i class="far fa-envelope"></i></a>
+            </li>
         </ul>
     </div>
 </div>
 
 </body>
 <script src="/js/small-stuff.js"></script>
+<script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
 
+    hamburger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    }
+    const navLink = document.querySelectorAll(".nav-link");
+
+    navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}
+</script>
 </html>

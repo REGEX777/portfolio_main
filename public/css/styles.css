@@ -36,6 +36,33 @@ body {
     color: #064663;
 }
 
+.container {
+    /* display: flex;
+    /* align-items: center; */
+    /* justify-content: center;  */
+    height: 80%;
+    width: 55%;
+    background-color: #064663;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.container p {
+    padding: 10% 10% 0 10%;
+    font-family: 'Anonymous Pro', monospace;
+    /* font-size: x-large; */
+    color: #ECB365;
+}
+
+.text {
+    margin: 0 100px 0 100px;
+    font-size: 20px;
+}
+
+.title {
+    font-size: 70px;
+}
+
 .footer {
     margin: 0 70px 0 70px;
     display: flex;
@@ -50,17 +77,23 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 .tooltip {
     position: relative;
     display: inline-block;
-    border-bottom: 1px dotted black;
-  }
-  
-  .tooltip .tooltiptext {
+}
+
+.cntc {
+    font-size: 20px;
+    padding: 0 2% 0 2%;
+}
+
+.tooltip .tooltiptext {
     width: 120px;
     bottom: 100%;
     left: 50%;
-    margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+    margin-left: -60px;
+    /* Use half of the width (120/2 = 60), to center the tooltip */
     visibility: hidden;
     width: 120px;
     background-color: black;
@@ -73,21 +106,27 @@ body {
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
-  }
-  
-  .tooltip:hover .tooltiptext {
+}
+
+.tooltip:hover .tooltiptext {
     visibility: visible;
-  }
+}
+
 .links {
     float: right;
     font-size: 17px;
     font-family: 'Anonymous Pro', monospace;
     color: #ECB365;
 }
-.links ul li:hover{
+
+.links ul li:hover {
     cursor: pointer;
 }
 
+.mail {
+    text-decoration: none;
+    color: #ECB365;
+}
 
 .brand {
     float: left;
@@ -119,6 +158,10 @@ body {
     width: 70%;
     background-color: #064663;
     border-radius: 4px;
+}
+
+nav ul li a {
+    display: inline-block;
 }
 
 .main-tagline {
@@ -168,6 +211,20 @@ body {
     align-items: center;
 }
 
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #ECB365;
+}
+
 .nav {
     color: #ECB365;
     background-color: #041C32;
@@ -198,5 +255,57 @@ body {
 @keyframes blink {
     50% {
         border-color: transparent
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* media-queries */
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #064663;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
 }

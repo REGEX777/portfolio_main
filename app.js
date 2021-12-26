@@ -17,8 +17,9 @@ app.get('/projects', function(req, res) {
 app.get('/contact', function(req, res){
     res.render('contact')
 })
-
-
+app.get('/about', function(req, res){
+    res.render('about')
+})
 
 app.listen(3000, function () {
     console.log('[✅] Server running on port 3000'.green);
