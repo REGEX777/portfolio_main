@@ -21,6 +21,6 @@ app.get('/about', function(req, res){
     res.render('about')
 })
 
-app.listen(3000 || process.env.PORT, function () {
+app.listen(process.env.PORT || 5000, function () {
     console.log('[✅] Server running on port 3000'.green);
 })
